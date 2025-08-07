@@ -317,10 +317,16 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: var(--card-shadow);
+            width: 100%;
+            aspect-ratio: 1 / 1; /* This makes the container square */
+            max-width: 400px; /* Limit the maximum width */
+            margin: 0 auto; /* Center the image */
         }
         
         .about-image img {
             width: 100%;
+            height: 100%;
+            object-fit: cover; /* This ensures the image covers the square container without distortion */
             display: block;
             transition: var(--transition);
         }
@@ -966,7 +972,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Arjen Ahmed</h1>
-            <p>3rd Year MEng Electrical & Electronic Engineering Student</p>
+            <p>MEng Electrical & Electronic Engineering Student</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn">View Projects</a>
                 <a href="#contact" class="btn btn-outline">Contact Me</a>
@@ -983,7 +989,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <a href="https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w2400?source=screenshot.guru"> <img src="https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w600-h315-p-k" alt="Arjen Ahmed" /> </a>
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w600-h315-p-k" alt="Arjen Ahmed">
                 </div>
                 <div class="about-text">
                     <h3>Electrical Engineering Student & Innovator</h3>
@@ -1375,7 +1381,7 @@
                     <i class="fas fa-users"></i>
                     <h3>President - EEE Society</h3>
                     <div class="period">2025 – Present</div>
-                    <p>Leading society activities, organising events, managing committee, budget, and outreach initiatives.</p>
+                    <p>Leading society activities, organizing events, managing committee, budget, and outreach initiatives.</p>
                 </div>
                 <div class="leadership-card">
                     <i class="fas fa-bullhorn"></i>
