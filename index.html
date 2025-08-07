@@ -319,20 +319,18 @@
             box-shadow: var(--card-shadow);
             width: 100%;
             aspect-ratio: 1 / 1; /* This makes the container square */
-            max-width: 400px; /* Limit the maximum width */
+            max-width: 450px; /* Increased max width for a larger image */
             margin: 0 auto; /* Center the image */
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* This ensures the image covers the square container without distortion */
-            display: block;
+            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w2400?source=screenshot.guru');
+            background-size: 110%; /* Zoomed out to show more of the image */
+            background-position: center top; /* Adjusted to show more of the top part */
+            background-repeat: no-repeat;
             transition: var(--transition);
         }
         
-        .about-image:hover img {
-            transform: scale(1.03);
+        .about-image:hover {
+            background-size: 115%; /* Slight zoom on hover */
+            transform: scale(1.02);
         }
         
         .about-text h3 {
@@ -665,6 +663,10 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.12);
         }
         
+        .leadership-card.current {
+            border: 2px solid var(--secondary);
+        }
+        
         .leadership-card i {
             font-size: 3rem;
             color: var(--secondary);
@@ -927,6 +929,10 @@
             .leadership-card h3 {
                 font-size: 1.3rem;
             }
+            
+            .about-image {
+                max-width: 350px; /* Slightly smaller on mobile */
+            }
         }
     </style>
 </head>
@@ -988,9 +994,7 @@
                 <div class="underline"></div>
             </div>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w600-h315-p-k" alt="Arjen Ahmed">
-                </div>
+                <div class="about-image"></div>
                 <div class="about-text">
                     <h3>Electrical Engineering Student & Innovator</h3>
                     <p>I'm a dedicated MEng Electrical and Electronic Engineering student at the University of Nottingham with a passion for innovative solutions in power systems, control engineering, and embedded systems. Currently maintaining First Class honors, I combine technical expertise with leadership skills to drive projects forward.</p>
@@ -1024,7 +1028,7 @@
                     <div class="timeline-content">
                         <h3>Coding Tutor</h3>
                         <div class="company">Stemspire</div>
-                        <div class="date">2024 – Present</div>
+                        <div class="date">2024 – 2025</div>
                         <ul>
                             <li>Python/C++ lessons delivery</li>
                             <li>Algorithms and software design</li>
@@ -1048,7 +1052,7 @@
                     <div class="timeline-content">
                         <h3>Events Steward</h3>
                         <div class="company">2022 Commonwealth Games</div>
-                        <div class="date">Jul 2022 – Aug 2022</div>
+                        <div class="date">2022 – 2022</div>
                         <ul>
                             <li>Attendee directional assistance</li>
                             <li>Support for disabled individuals</li>
@@ -1377,12 +1381,32 @@
                 <div class="underline"></div>
             </div>
             <div class="leadership-grid">
-                <div class="leadership-card">
+                <!-- Current Roles -->
+                <div class="leadership-card current">
                     <i class="fas fa-users"></i>
                     <h3>President - EEE Society</h3>
                     <div class="period">2025 – Present</div>
                     <p>Leading society activities, organizing events, managing committee, budget, and outreach initiatives.</p>
                 </div>
+                <div class="leadership-card current">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Subject Ambassador</h3>
+                    <div class="period">2025 - Present</div>
+                    <p>Representing EEE course at university events, delivering talks, campus tours, and Q&A sessions.</p>
+                </div>
+                <div class="leadership-card current">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Engineering Peer Mentor</h3>
+                    <div class="period">2025 - Present</div>
+                    <p>Supporting younger students' academic and personal growth through regular meetings and talks.</p>
+                </div>
+                <div class="leadership-card current">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Electrical Engineer - UoN Racing</h3>
+                    <div class="period">2024 - Present</div>
+                    <p>Developing electrical systems for Formula Student car, focusing on safety-critical systems like the 95% detector.</p>
+                </div>
+                <!-- Past Roles -->
                 <div class="leadership-card">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Publicity Officer - EEE Society</h3>
@@ -1396,22 +1420,10 @@
                     <p>Managing society finances, budgeting, expense tracking, and fundraising for financial stability.</p>
                 </div>
                 <div class="leadership-card">
-                    <i class="fas fa-graduation-cap"></i>
-                    <h3>Subject Ambassador</h3>
-                    <div class="period">2025 - Present</div>
-                    <p>Representing EEE course at university events, delivering talks, campus tours, and Q&A sessions.</p>
-                </div>
-                <div class="leadership-card">
-                    <i class="fas fa-hands-helping"></i>
-                    <h3>Engineering Peer Mentor</h3>
-                    <div class="period">2025 - Present</div>
-                    <p>Supporting younger students' academic and personal growth through regular meetings and talks.</p>
-                </div>
-                <div class="leadership-card">
-                    <i class="fas fa-car-side"></i>
-                    <h3>Electrical Engineer - UoN Racing</h3>
-                    <div class="period">2024 - Present</div>
-                    <p>Developing electrical systems for Formula Student car, focusing on safety-critical systems like the 95% detector.</p>
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3>Coding Tutor</h3>
+                    <div class="period">2024 – 2025</div>
+                    <p>Delivered Python/C++ lessons covering algorithms, software design, and problem-solving techniques.</p>
                 </div>
             </div>
         </div>
