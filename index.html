@@ -691,49 +691,10 @@
             border-radius: 2px;
         }
         
-        /* About */
+        /* About (Updated Layout) */
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-            align-items: center;
-        }
-        
-        .about-image-wrapper {
-            position: relative;
-            max-width: 400px;
+            max-width: 900px;
             margin: 0 auto;
-        }
-        
-        .about-image {
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNE-0cUtrQMmB1oy9qSox1wctdwOSKEB6uON15lFI82tL7Dt7kxTa47uolhkZYddpkiOx4nPn3K0HTrNGxLN0_8rmn9AcpZYTyfQNLpHWT4s0qxkOM=w2400?source=screenshot.guru');
-            background-size: cover;
-            background-position: center top;
-            background-repeat: no-repeat;
-            transition: var(--transition);
-            border: 4px solid var(--card-bg);
-        }
-        
-        .about-image:hover {
-            transform: scale(1.02);
-        }
-        
-        .about-image-wrapper::before {
-            content: '';
-            position: absolute;
-            top: -15px;
-            right: -15px;
-            width: 100%;
-            height: 100%;
-            background: var(--gradient-2);
-            border-radius: 24px;
-            z-index: -1;
-            opacity: 0.6;
         }
         
         .about-text h3 {
@@ -752,7 +713,7 @@
         
         .about-info {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 30px;
         }
@@ -1361,15 +1322,6 @@
             .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
             .left::after, .right::after { left: 21px; }
             .right { left: 0%; }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .about-info {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
         
         @media (max-width: 768px) {
@@ -1397,8 +1349,6 @@
             
             .hero-stats { gap: 25px; }
             .stat-num { font-size: 1.5rem; }
-            
-            .about-info { grid-template-columns: 1fr; }
         }
         
         @media (max-width: 480px) {
@@ -1426,6 +1376,7 @@
         <div class="blob"></div>
     </div>
 
+    <!-- Header -->
     <header>
         <div class="container">
             <nav>
@@ -1449,6 +1400,7 @@
         </div>
     </header>
 
+    <!-- Section Indicator -->
     <div class="section-indicator">
         <div class="indicator-dot active" data-section="Home" data-target="#home"></div>
         <div class="indicator-dot" data-section="About" data-target="#about"></div>
@@ -1459,10 +1411,12 @@
         <div class="indicator-dot" data-section="Contact" data-target="#contact"></div>
     </div>
 
+    <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-grid">
@@ -1526,6 +1480,7 @@
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-title">
@@ -1534,14 +1489,11 @@
                 <div class="underline"></div>
             </div>
             <div class="about-content">
-                <div class="about-image-wrapper">
-                    <div class="about-image"></div>
-                </div>
                 <div class="about-text">
                     <h3>Electrical Engineering Innovator</h3>
                     <p>I'm an MEng Electrical and Electronic Engineering student at the University of Nottingham, on track for a First Class degree. My passion lies at the intersection of <strong>power electronics, embedded systems, and sustainable engineering</strong> — building solutions that are both technically rigorous and socially impactful.</p>
                     <p>Currently an incoming Placement Engineer at <strong>GE Vernova</strong> within the Power Conversion & Storage UK division, I apply my skills to real-world energy challenges. From designing isolated DC-DC converters to developing peat bog monitoring systems for carbon initiatives, I thrive on end-to-end project ownership — from requirements capture through to PCB layout and validation.</p>
-                    <p>I'm also proud President of the EEE Society, where I lead initiatives connecting students with industry, and contribute to the UoN Racing Formula Student team on safety-critical electrical systems.</p>
+                    <p>I previously served as President of the EEE Society, where I led initiatives connecting students with industry, and I actively contribute to the UoN Racing Formula Student team on safety-critical electrical systems.</p>
                     <div class="about-info">
                         <div class="info-item">
                             <i class="fas fa-graduation-cap"></i>
@@ -1565,6 +1517,7 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
     <section id="experience" style="background: var(--section-alt);">
         <div class="container">
             <div class="section-title">
@@ -1577,7 +1530,7 @@
                     <div class="timeline-content">
                         <h3>Electrical Engineer Intern</h3>
                         <div class="company"><i class="fas fa-bolt"></i> GE Vernova · Rugby, UK</div>
-                        <div class="date">July 2026 – Present</div>
+                        <div class="date">2026 – Present</div>
                         <ul>
                             <li>Placement Engineer within the Power Conversion & Storage UK division.</li>
                             <li>Working on cutting-edge power conversion technologies and energy storage solutions.</li>
@@ -1622,6 +1575,7 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-title">
@@ -1715,6 +1669,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" style="background: var(--section-alt);">
         <div class="container">
             <div class="section-title">
@@ -1769,6 +1724,7 @@
         </div>
     </section>
 
+    <!-- Leadership Section -->
     <section id="leadership">
         <div class="container">
             <div class="section-title">
@@ -1780,7 +1736,7 @@
                 <div class="leadership-card">
                     <div class="icon-wrapper"><i class="fas fa-users"></i></div>
                     <h3>President - EEE Society</h3>
-                    <div class="period">2025 – Present</div>
+                    <div class="period">2025 – 2026</div>
                     <p>Lead a large student society, managing the committee and budget of over £1,000. Organised 15 industry talks, technical workshops, and social events throughout the year.</p>
                 </div>
                 <div class="leadership-card">
@@ -1799,6 +1755,7 @@
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" style="background: var(--section-alt);">
         <div class="container">
             <div class="section-title">
@@ -1826,6 +1783,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="social-links">
@@ -1980,5 +1938,3 @@
     </script>
 </body>
 </html>
-
-```
